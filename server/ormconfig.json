@@ -1,0 +1,8 @@
+[{
+  "synchronize": false,
+  "entities": ["dist/entity/*.js"],
+  "logging": false,
+  "cli": {
+    "entitiesDir":"./src/entity"
+  }
+}]
