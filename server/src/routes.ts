@@ -7,14 +7,25 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.get("/api/user/card/list", async function (req: Request, res: Response) {
-  const results = getAllUserCards();
+  const results = await getAllUserCards();
   res.json(results);
 });
 
 router.post("/api/user/card/add", async function (req: Request, res: Response) {
-  validateCard(req.body.card);
-  addUserCard(req.body.name, req.body.card, req.body.limit);
-  res.json({ success: "Inserted!" });
+  const result = await addUserCard(
+    req.body.name,
+    req.body.card_no,
+    req.body.limit
+  );
+  if (result) {
+    res
+      .status(200)
+      .json({ status: "success", message: "Details created success!" });
+  } else {
+    res
+      .status(400)
+      .json({ status: "error", message: "Some error. Please try later." });
+  }
 });
 
 router.delete(

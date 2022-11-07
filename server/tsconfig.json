@@ -1,22 +1,23 @@
 {
   "compilerOptions": {
-      "rootDir": ".",
-      "outDir": "dist",
-      "target": "es6",
-      "lib": [
-          "es6"
-        ],
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "experimentalDecorators": true, 
-      "emitDecoratorMetadata": true,
-      "forceConsistentCasingInFileNames": true
+    "rootDir": ".",
+    "outDir": "dist",
+    "target": "es6",
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["/**/*.ts", "ormconfig.json"],
-  "exclude": [
-      "./tests/",
-      "./node_modules/",
-      "./dist/"
-  ]
+  "ts-node": {
+    // Tell ts-node CLI to install the --loader automatically
+    "esm": true,
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["/**/*.ts", "ormconfig.ts"],
+  "exclude": ["./tests/", "./node_modules/", "./dist/"]
 }

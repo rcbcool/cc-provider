@@ -18,7 +18,7 @@ async function initializeServer() {
 
   dotenv.config();
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3002;
   const app: Express = express();
 
   const corsOptions = {
