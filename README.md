@@ -32,4 +32,4 @@ npm install
 
 npm start
 
-(This should use the default port 3000 i.e., http://localhost:300/
+(This should use the default port 3000 i.e., http://localhost:3000/
