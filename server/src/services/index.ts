@@ -43,7 +43,6 @@ async function validateCard(card_no: string) {
 
   for (let i = 0; i < newCno.length; i++) {
     if (i % 2 !== 0) {
-      console.log(newCno[i]);
       let cur: number = parseInt(newCno[i]);
       let num: number = 0;
       if (cur + cur > 9) {

@@ -11,13 +11,6 @@
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
   },
-  "ts-node": {
-    // Tell ts-node CLI to install the --loader automatically
-    "esm": true,
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  },
   "include": ["/**/*.ts", "ormconfig.ts"],
   "exclude": ["./tests/", "./node_modules/", "./dist/"]
 }
